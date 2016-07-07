@@ -25,6 +25,8 @@ import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.annotation.StringRes;
 import android.support.v4.content.ContextCompat;
+import android.text.SpannableStringBuilder;
+import android.text.style.ImageSpan;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.Gravity;
@@ -287,6 +289,10 @@ public class EasyVideoPlayer extends FrameLayout implements IUserMethods, Textur
     public void setSubmitText(@Nullable CharSequence text) {
         mSubmitText = text;
         mBtnSubmit.setText(text);
+    }
+
+    public void setSubmitBackground(@Nullable int resource) {
+        mBtnSubmit.setBackgroundResource(resource);
     }
 
     @Override
