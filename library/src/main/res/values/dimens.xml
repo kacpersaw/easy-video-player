@@ -14,4 +14,5 @@
     <dimen name="evp_negative_inset_large">-8dp</dimen>
     <dimen name="evp_negative_inset_small">-2dp</dimen>
 
+    <dimen name="evp_margin_right">16dp</dimen>
 </resources>

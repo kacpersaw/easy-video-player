@@ -4,7 +4,10 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.content.res.ResourcesCompat;
 import android.support.v7.app.AppCompatActivity;
+import android.util.DisplayMetrics;
 import android.util.Log;
+import android.util.TypedValue;
+import android.view.ViewGroup;
 import android.widget.Toast;
 
 import com.afollestad.easyvideoplayer.EasyVideoCallback;
@@ -23,7 +26,12 @@ public class MainActivity extends AppCompatActivity implements EasyVideoCallback
         player = (EasyVideoPlayer) findViewById(R.id.player);
         assert player != null;
         player.setCallback(this);
-        //player.setSubmitBackground(R.drawable.evp_action_play);
+        player.setSubmitBackground(R.drawable.evp_action_pause);
+
+        ViewGroup.LayoutParams params = player.getSubmitLayoutParams();
+        params.height = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 55, getResources().getDisplayMetrics());
+        params.width = params.height;
+        player.setSubmitLayoutParams(params);
         // All further configuration is done from the XML layout.
     }
 

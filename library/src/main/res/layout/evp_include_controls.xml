@@ -109,6 +109,7 @@
         android:minHeight="@dimen/evp_button_size"
         android:paddingLeft="@dimen/evp_content_inset"
         android:paddingRight="@dimen/evp_content_inset"
+        android:layout_marginRight="@dimen/evp_margin_right"
         android:text="@string/evp_submit"
         android:textColor="#fff"
         android:textSize="@dimen/evp_text_size_medium"
